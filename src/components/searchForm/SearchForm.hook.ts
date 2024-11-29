@@ -7,7 +7,7 @@ import { IPokemonDetailResponse } from '@/interface/pokemonDetail';
 
 const useSearchForm = () => {
 
-    const { register, watch, formState: { errors },} = useForm();
+    const { register, watch,} = useForm();
 
     const keyword = watch("keyword")
     const type = watch("type")

@@ -34,5 +34,3 @@ const PokemonCard = ({ image, name, id, types }: PokemonCardProps) => {
 }
 
 export default PokemonCard
-
-//comment

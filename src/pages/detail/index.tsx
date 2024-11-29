@@ -1,8 +1,7 @@
-import PokemonCard from '@/components/PokemonCard'
 import { IPokemonDetailResponse } from '@/interface/pokemonDetail'
 import { pokemonDetailServices, pokemonListServices } from '@/services'
-import React, { useEffect, useState } from 'react'
-import { Link, Route, Routes, useParams } from 'react-router-dom'
+import { useEffect, useState } from 'react'
+import { Link, useParams } from 'react-router-dom'
 
 type pokemonType = {
     data:IPokemonDetailResponse | undefined
@@ -102,6 +101,4 @@ const DetailPage = () => {
 
 export default DetailPage
 
-function setFetchPokemonList(arg0: { data: never[]; loading: boolean; error: null }) {
-  throw new Error('Function not implemented.')
-}
+
