@@ -5,14 +5,16 @@ export interface IResponse {
     error?:
         | AxiosError<AxiosResponse<any,any>,any>
         | AxiosResponse<AxiosResponse<any,any>,any>
-        | undefined 
+        | undefined ;
+    data?: any;
 }
 
 export const handleResponse = {
     success:(res:AxiosResponse)=>{
         return {
             status:res.status,
-            data:res.data
+            data:res.data,
+            error: undefined,
         }
     },
     error:(res: AxiosError<AxiosResponse>): IResponse =>{
@@ -20,11 +22,13 @@ export const handleResponse = {
             return {
                 status: 500,
                 error: res,
+                data: null,
             }
         }else{
             return{
                 status: res.response?.status,
                 error: res.response?.data,
+                data: null,
             }
         }
     },
