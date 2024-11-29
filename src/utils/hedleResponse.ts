@@ -14,7 +14,7 @@ export const handleResponse = {
         return {
             status:res.status,
             data:res.data,
-            error: undefined,
+            error: null,
         }
     },
     error:(res: AxiosError<AxiosResponse>): IResponse =>{

@@ -4,7 +4,7 @@ import {IPokemonListResponse} from '../interface/pokemonList' ;
 import {handleResponse,IResponse } from '../utils/hedleResponse';
 
 interface IGetpokemonListResponse extends IResponse {
-    error: any;
+    error?: any;
     status: number | undefined
     data?: IPokemonListResponse
 }
