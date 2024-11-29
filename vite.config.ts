@@ -1,6 +1,5 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import { BASE_GITHUB_URL } from './src/config';
 
 // https://vitejs.dev/config/
 /*
@@ -19,7 +18,7 @@ export default defineConfig(({ command }) => {
   }
 
   if (command !== 'serve') {
-    config.base = BASE_GITHUB_URL
+    config.base = "/pokedex-app/";
   }
 
   return config

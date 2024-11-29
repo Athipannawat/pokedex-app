@@ -1,7 +1,6 @@
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import HomePage from './pages/home';
 import DetailPage from './pages/detail';
-import { BASE_GITHUB_URL } from './config';
 
 function App() {
   const router = createBrowserRouter([
@@ -13,7 +12,7 @@ function App() {
     path: "/detail/:name",
     element: <DetailPage />,
   },
-],{ basename: import.meta.env.DEV ? '/' : BASE_GITHUB_URL });
+],{ basename: import.meta.env.DEV ? '/' : "/pokedex-app/" });
 
 
   return ( 
