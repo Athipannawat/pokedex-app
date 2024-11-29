@@ -1,5 +1,5 @@
-import { IPokemonDetailResponse } from '@/interface/pokemonDetail'
-import { pokemonDetailServices } from '@/services'
+import { IPokemonDetailResponse } from '../../interface/pokemonDetail'
+import { pokemonDetailServices } from '../../services'
 import { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 

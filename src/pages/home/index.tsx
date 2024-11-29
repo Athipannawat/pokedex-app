@@ -1,7 +1,7 @@
 
-import SearchForm from '@/components/searchForm';
-import { usePokemonListStore } from '@/store/pokemonList';
-import PokemonCard from '@/components/PokemonCard'
+import SearchForm from '../../components/searchForm';
+import { usePokemonListStore } from '../../store/pokemonList';
+import PokemonCard from '../../components/PokemonCard'
 import ReactLoading from "react-loading"
 
 const HomePage = () => {

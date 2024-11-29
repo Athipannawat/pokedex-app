@@ -1,9 +1,9 @@
 import { useEffect } from 'react'
-import { pokemonListServices,pokemonDetailServices } from "@/services";
-import { usePokemonListStore } from '@/store/pokemonList'
+import { pokemonListServices,pokemonDetailServices } from "../../services";
+import { usePokemonListStore } from '../../store/pokemonList'
 import { useForm } from 'react-hook-form';
-import { generationList } from '@/utils/optionList';
-import { IPokemonDetailResponse } from '@/interface/pokemonDetail';
+import { generationList } from '../../utils/optionList';
+import { IPokemonDetailResponse } from '../../interface/pokemonDetail';
 
 const useSearchForm = () => {
 
@@ -49,7 +49,7 @@ const useSearchForm = () => {
         const typeFilter = 
             type !== 'all types' ? 
             keywordFilter.filter((item)=>
-                item.types.find((f)=>
+                item.types.find((f: { type: { name: string } })=>
                     f.type.name.toLocaleLowerCase().includes(type.toLocaleLowerCase())
                 )
             )

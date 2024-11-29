@@ -1,9 +1,10 @@
 import axios from "axios"
-import {POKEMON_BASE_URL} from '@/utils/constant';
-import {IPokemonListResponse} from '@/interface/pokemonList' ;
-import {handleResponse,IResponse } from '@/utils/hedleResponse';
+import {POKEMON_BASE_URL} from '../utils/constant';
+import {IPokemonListResponse} from '../interface/pokemonList' ;
+import {handleResponse,IResponse } from '../utils/hedleResponse';
 
 interface IGetpokemonListResponse extends IResponse {
+    error: any;
     status: number | undefined
     data?: IPokemonListResponse
 }
